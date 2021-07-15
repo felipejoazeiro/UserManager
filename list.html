@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-list.css">
+    <link rel="stylesheet" href="css/style-list-search.css">
+    <title>List all Users</title>
+</head>
+<body>
+    <main>
+        <div class="search-wrapper">
+            <div class="input-holder">
+                <input type="text" class="search-input" placeholder="Type to search" />
+                <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+            </div>
+            <span class="close" onclick="searchToggle(this, event);"></span>
+        </div>
+        <section class="container">
+            <div class="cards"></div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/search-style.js"></script>
+</body>
+</html>
