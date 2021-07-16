@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(135deg,  #9b59b6, #71b7e6);
 }
 
 .container{
@@ -87,6 +87,9 @@ form .gender__details .category{
     border: 5px solid transparent;
     transition: all 0.3s ease;
 }
+.gender__details{
+    margin-bottom: 2rem;
+}
 
 #dot-1:checked ~ .category .one,
 #dot-2:checked ~ .category .two,
@@ -97,34 +100,88 @@ form .gender__details .category{
 form input[type="radio"]{
     display: none;
 }
-form .button{
-    height: 45px;
-    margin: 45px 0;
-}
-form .button input{
-    height: 100%;
-    width: 100%;
+
+form .button {
+    display: flex;
+    height: 4rem;
+    position: relative;
+    width: 60%;
+    margin: 4px auto;
+    text-align: center;
+    justify-content: center;
     outline-color: none;
-    color: #fff;
+    align-items: center;
+    color: black;
     border: none;
     font-size: 18px;
+    background-color: rgb(127, 47, 255);
+    cursor: pointer;
     border-radius: 5px;
     font-weight: 500;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    overflow: hidden;
 }
-form .button input:hover{
-    background: linear-gradient(0deg, #71b7e6, #9b59b6);
+form .button:hover{
+}
+.button__submit{
+    position: relative;
+    color: #000000;
+    z-index: 1;
+    transition: 2.5s;
+    text-transform: uppercase;
+}
+.button:hover .button__submit{
+    color: #fff;
+}
+.wave{
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00aeff;
+    transition: 2.5s;
+}
+.wave:before{
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url('../images/wave-button.png');
+    animation: animate 0.5s linear infinite;
+}
+.button:hover .wave{
+    top: 0;
+
+}
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+
+    }100%{
+        background-position-x: 118px;
+
+    }
 }
 .img{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: -1000;
+    z-index: -1;
 }
 .img img{
     width: 700px;
-    
+}
+.img-wave{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+.img-wave img{
+    width: 1000px;
 }
 @media (max-width: 584px){
     .container{
@@ -144,13 +201,12 @@ form .button input:hover{
     .user__details::-webkit-scrollbar{
         width: 0;
     }
-    .img{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: -1000;
-    }
+
     .img img{
-        width: 400px;
+        width: 300px;
+    }
+    
+    .img-wave img{
+        width: 600px;
     }
 }
