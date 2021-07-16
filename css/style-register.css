@@ -181,7 +181,7 @@ form .button:hover{
     z-index: -10;
 }
 .img-wave img{
-    width: 1000px;
+    width: 750px;
 }
 @media (max-width: 584px){
     .container{
