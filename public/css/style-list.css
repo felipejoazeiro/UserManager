@@ -50,6 +50,9 @@ body{
 }
 .container .card .content{
     position: relative;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+    
     margin-top: -140px;
     padding: 10px 15px;
     text-align: center;
@@ -64,6 +67,13 @@ body{
     margin-top: -40px;
     transition-delay: 0.3s;
 }
+.content .card__email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 
 
